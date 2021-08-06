@@ -1,0 +1,111 @@
+@import '../App.scss';
+.landing {
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.7) 100%),
+                url("http://mppmduse2pmpovwapp.azurewebsites.net/wp-content/uploads/2019/09/netflix-background-9.jpg");
+    background-size: cover;
+    position: relative;
+    .landing__top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 20px;
+        
+        img {
+            height: 50px;
+            margin-right: 10px;
+        }
+        .landing__top--signin {
+            display: flex;
+            select {
+                margin-right: 20px;
+                padding: 10px 20px;
+                background-color: #171717;
+                color: #f4f4f4;
+                border: 2px solid #ffff;
+                @include mobile-lg {font-size: 16;};
+            @include mobile {font-size: 10px;};
+                option {
+                    color: #ffff;
+                    background: #171717;
+                }
+            }
+            button {
+                background-color: red;
+                border: 1px solid red;
+                padding: 5px 20px;
+                color: #f4f4f4;
+                border-radius: 5px;
+                font-size: 16px;
+                cursor: pointer;
+            }
+        }
+    }
+    .landing__container {
+        display: flex;
+        position: absolute;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        top: 30%;
+        left:0;
+        width: 100%;
+        color: #f4f4f4;
+        h1 {
+            width: 50%;
+            font-size: 50px;
+            text-align: center;
+            @include tablet {font-size: 40px;};
+            @include mobile-lg {font-size: 25px;};
+            @include mobile {font-size: 20px;};
+        }
+        h2 {
+            margin: 20px;
+            @include mobile-lg {font-size: 20px;};
+            @include mobile {font-size: 15px;};
+        }
+        > span {
+            font-size: 20px;
+            @include mobile-lg {font-size: 15px;};
+            @include mobile {font-size: 10px;};
+        }
+        .landing__container--input {
+            display: flex;
+            width: 650px;
+            align-items: center;
+            justify-content: center;
+            @include tablet {width: 550px;};
+            @include mobile-lg {
+                width: 400px;
+                flex-direction: column;
+            };
+            @include mobile {
+                width: 300px;
+                flex-direction: column;
+            };
+            input {
+                width: 60%;
+                padding: 20px 10px;
+                margin-top: 10px;
+            }
+            .input__register {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 40%;
+                border: 1px solid red;
+                border-radius: 8px;
+                background: red;
+                color: #f4f4f4;
+                padding: 20px 0;
+                margin-top: 10px;
+                cursor: pointer;
+                span {
+                    margin-right: 10px;
+                }
+            }
+        }
+    }
+}
