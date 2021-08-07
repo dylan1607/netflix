@@ -2,7 +2,6 @@
   "name": "netflix",
   "version": "1.0.0",
   "description": "",
-  "proxy": "http://locahost:5000",
   "main": "server/index.js",
   "scripts": {
     "start": "node server/index.js",

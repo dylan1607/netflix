@@ -1,25 +1,36 @@
-const router = require('express').Router();
-const verify = require('../verifyToken');
+const router = require("express").Router();
+const verify = require("../verifyToken");
 
 //import Movie Controller
-const { createMovie, updateMovie, deleteMovie, getMovie, getRandomMovie, getMovies } = require('../controller/movieController');
+const {
+  createMovie,
+  updateMovie,
+  deleteMovie,
+  getMovie,
+  getRandomMovie,
+  getMovies,
+  deleteAllMovie,
+} = require("../controller/movieController");
 
 //Function create new movie -- Admin
-router.post('/', verify, createMovie);
+router.post("/", verify, createMovie);
 
 //Function update movie -- Admin
-router.put('/', verify, updateMovie);
+router.put("/", verify, updateMovie);
 
 //Function delete movie -- Admin
-router.delete('/', verify, deleteMovie);
+router.delete("/", verify, deleteMovie);
+
+//Function delete all movie -- Admin
+router.delete("/delete", verify, deleteAllMovie);
 
 //Function get movie
-router.get('/find/:id', getMovie);
+router.get("/find/:id", getMovie);
 
 //Function get random movie
-router.get('/random', verify, getRandomMovie);
+router.get("/random", verify, getRandomMovie);
 
 //Function get all movie -- Admin
-router.get('/', verify, getMovies);
+router.get("/", verify, getMovies);
 
 module.exports = router;

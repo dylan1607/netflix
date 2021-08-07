@@ -1,17 +1,26 @@
-import { ArrowBackOutlined } from '@material-ui/icons'
-import './Watch.scss'
+import { ArrowBackOutlined } from "@material-ui/icons";
+import { Link, useLocation } from "react-router-dom";
+import "./Watch.scss";
 
 export const Watch = () => {
-    return (
-        <div className='watch'>
-            <div className="watch__back">
-                <ArrowBackOutlined />
-                Home
-            </div>
-            <iframe title='trailer' frameborder='0'
-                src="https://www.youtube.com/embed/WcfRH2tgIxA?autoplay=1&mute=0&controls=1&modestbranding=1">
-            </iframe>
+  const location = useLocation();
+  //   console.log(location);
+  const videoUrl = location.movie.video;
+  return (
+    <div className="watch">
+      <Link to="/">
+        <div className="watch__back">
+          <ArrowBackOutlined />
+          Home
         </div>
-    )
-}
-export default Watch
+      </Link>
+      <iframe
+        title="trailer"
+        frameBorder="0"
+        // src="https://www.youtube.com/embed/WcfRH2tgIxA?autoplay=1&mute=1&controls=1&modestbranding=1">
+        src={videoUrl}
+      ></iframe>
+    </div>
+  );
+};
+export default Watch;

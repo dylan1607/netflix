@@ -1,75 +1,88 @@
+@import "../App.scss";
+
 .navbar {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  background: linear-gradient(to top, transparent 0%, rgb(0, 0, 0, 0.3) 50%);
+  transition: all 0.3s ease;
+  z-index: 999;
+
+  &.scrolled {
+    background: var(--main-color);
+  }
+  .navbar__left {
     display: flex;
-    width: 100%;
-    justify-content: space-between;
     align-items: center;
-    position: fixed;
-    top:0;
-    background: linear-gradient(to top, transparent 0%, rgb(0, 0, 0, 0.3) 50%);
-    transition: all 0.5s ease;
-    z-index: 999;
+    padding: 20px 0;
+    .left__logo {
+      img {
+        height: 40px;
+        margin-right: 5px;
+      }
+    }
+    .left__link {
+      display: flex;
+      list-style: none;
+      @include mobile-lg {
+        font-size: 14px;
+      }
 
-    &.scrolled {
+      li {
+        margin: 0px 10px;
+        @include mobile {
+          display: none;
+        }
+      }
+    }
+  }
+  .navbar__right {
+    display: flex;
+    align-items: center;
+    padding: 20px 0;
+    img {
+      // border: 1px solid rgba(0, 0, 0, 0.5);
+      width: 30px;
+      height: 30px;
+      border-radius: 5px;
+      cursor: pointer;
+      // background: #fff;
+    }
+    .navbar__right--icon {
+      margin: 0 10px;
+      cursor: pointer;
+      @include mobile {
+        margin: 0 30px;
+        font-size: 20px;
+      }
+    }
+    span {
+      margin: 0 5px;
+      cursor: pointer;
+    }
+    .navbar__right--profile {
+      .profile__options {
+        display: none;
         background: var(--main-color);
-    }
-    .navbar__left {
-        display: flex;
-        align-items: center;
-        padding: 20px 0 20px 50px;
-        .left__logo {
-            img {
-                height: 40px;
-                margin-right: 10px;
-            }
-        }
-        .left__link {
-            display: flex;
-            list-style: none;
-            li {
-                margin: 0px 15px;
-            }
-        }
-    }
-    .navbar__right {
-        display: flex;
-        align-items: center;
-        padding: 20px 0 20px 0;
-        img {
-            border: 1px solid rgba(255, 255, 255, 0.5);
-            width: 30px;
-            height: 30px;
-            border-radius: 5px;
-            cursor: pointer;
-            background: #fff;
-        }
-        .navbar__right--icon {
-            margin: 0 15px;
-            cursor: pointer;
-        }
+        border-radius: 5px;
         span {
-            margin: 0 15px;
-            cursor: pointer;
+          padding: 10px;
+          cursor: pointer;
         }
-        .navbar__right--profile {
-            .profile__options {
-                display: none;
-                background: var(--main-color);
-                border-radius: 5px;
-                span {
-                    padding: 10px;
-                    cursor: pointer;
-                }
-            }
+      }
 
-            &:hover {
-                .profile__options {
-                    display: flex;
-                    flex-direction: column;
-                    position: absolute;
-                    top: 80px;
-                    right: 15px;
-                }
-            }
+      &:hover {
+        .profile__options {
+          display: flex;
+          flex-direction: column;
+          position: absolute;
+          top: 80px;
+          right: 15px;
         }
+      }
     }
+  }
 }
