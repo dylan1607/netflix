@@ -1,0 +1,59 @@
+.widgetSm {
+  flex: 1;
+  margin-right: 20px;
+  padding: 25px;
+  border-radius: 10px;
+  -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.57);
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.57);
+
+  .widgetSm__title {
+    font-size: 22px;
+    font-weight: 600;
+  }
+  .widgetSm__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    img {
+      height: 40px;
+      width: 40px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+    .widgetSm__lislt--itemSm {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin: 20px 0;
+
+      .itemSm__info {
+        display: flex;
+        flex-direction: column;
+
+        .itemSm__info--username {
+          font-weight: 600;
+        }
+        .itemSm__info--job {
+          font-weight: 300;
+        }
+      }
+      .itemSm__button {
+        display: flex;
+        align-items: center;
+        border: none;
+        border-radius: 10px;
+        padding: 7px 10px;
+        background-color: #f7f7f7;
+        color: gray;
+        cursor: pointer;
+
+        .itemSm__button--icon {
+          font-size: 16px;
+          margin-right: 5px;
+        }
+      }
+    }
+  }
+}

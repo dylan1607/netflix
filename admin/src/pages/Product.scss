@@ -1,0 +1,125 @@
+.product {
+  flex: 4;
+
+  .product__top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 20px 20px 0 20px;
+    .product__top--btn {
+      width: 80px;
+      border: none;
+      border-radius: 5px;
+      padding: 5px;
+      background: teal;
+      color: #ffff;
+      font-size: 16px;
+      cursor: pointer;
+    }
+  }
+
+  .product__mid {
+    display: flex;
+
+    .product__mid--left {
+      flex: 1;
+    }
+    .product__mid--right {
+      flex: 1;
+      padding: 20px;
+      border-radius: 10px;
+      margin: 20px;
+      -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.57);
+      box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.57);
+
+      .right__infoTop {
+        display: flex;
+        align-items: center;
+        img {
+          height: 40px;
+          width: 40px;
+          object-fit: cover;
+          border-radius: 50%;
+        }
+        .right__infoTop--title {
+          font-weight: 600;
+          margin-left: 20px;
+        }
+      }
+
+      .right__infoBot {
+        margin-top: 10px;
+
+        .right__infoBot__item {
+          display: flex;
+          justify-content: space-between;
+          width: 150px;
+        }
+      }
+    }
+  }
+  .product__bot {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px;
+    -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.57);
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.57);
+
+    .product__bot--title {
+      font-weight: 600;
+      font-size: 20px;
+      margin-bottom: 20px;
+    }
+
+    .product__bot--form {
+      display: flex;
+      justify-content: space-around;
+
+      .form__left {
+        display: flex;
+        flex-direction: column;
+
+        > label {
+          margin-bottom: 10px;
+        }
+        > input {
+          margin-bottom: 10px;
+          border: none;
+          padding: 5px;
+          border-bottom: 1px solid #1111;
+        }
+        select {
+          margin-bottom: 10px;
+        }
+      }
+
+      .form__right {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        .form__right--update {
+          display: flex;
+          align-items: center;
+          img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-right: 20px;
+          }
+        }
+        .form__right--btn {
+          border: none;
+          border-radius: 5px;
+          background: green;
+          color: #ffff;
+          padding: 5px;
+          cursor: pointer;
+          font-weight: 600;
+        }
+      }
+    }
+  }
+}
