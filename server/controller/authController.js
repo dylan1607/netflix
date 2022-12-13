@@ -1,5 +1,3 @@
-// require('dotenv').config();
-require('dotenv').config();
 const User = require('../models/User');
 const crypto = require('crypto-js');    //Encrypt password before send to database
 const jwt = require('jsonwebtoken');
