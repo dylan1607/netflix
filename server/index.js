@@ -1,4 +1,3 @@
-require("dotenv").config();
 const express = require("express");
 const app = express();
 const connectdb = require("./config/db");
@@ -11,7 +10,7 @@ const listRoute = require("./routes/lists");
 
 const PORT = process.env.PORT;
 
-connectdb(); //call connection to mongoosedb
+connectdb(); //call connection to mongooseDB
 app.use(express.json()); //Accept json by default -- IMPORTANT -- if u want to post request
 
 //First authentication and create Token user
